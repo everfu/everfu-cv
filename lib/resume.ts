@@ -1,6 +1,6 @@
 import type { ResumeData } from "@/types/resume";
 
-const FALLBACK_NAME = "王卓";
+const FALLBACK_NAME = "*卓";
 
 export function getResumeData(): ResumeData {
   const name = process.env.NEXT_PUBLIC_NAME?.trim() || FALLBACK_NAME;
