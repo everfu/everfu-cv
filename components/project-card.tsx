@@ -23,6 +23,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {(project.link || project.techs?.length) && (
         <p className="project-card__meta">
+          {project.link ? <InfoLink className="project-card__link" to={project.link} /> : null}
+
           <span className="project-card__techs">
             {project.techs?.map((tech) => (
               <span className="project-card__tech" key={tech}>
@@ -31,8 +33,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </span>
             ))}
           </span>
-
-          {project.link ? <InfoLink className="project-card__link" to={project.link} /> : null}
         </p>
       )}
 

@@ -1,6 +1,7 @@
 export const TECH_ICON_MAP = {
   Axios: "simple-icons:axios",
   CSS: "simple-icons:css3",
+  "C++": "skill-icons:cpp",
   Electron: "file-icons:electron",
   Hexo: "simple-icons:hexo",
   JavaScript: "simple-icons:javascript",
@@ -11,7 +12,9 @@ export const TECH_ICON_MAP = {
   Nitro: "unjs:nitro",
   Nuxt: "vscode-icons:file-type-nuxt",
   Pinia: "logos:pinia",
+  PostgreSQL: "logos:postgresql",
   Pug: "simple-icons:pug",
+  Redis: "logos:redis",
   Scss: "vscode-icons:file-type-scss",
   Stylus: "simple-icons:stylus",
   TypeScript: "vscode-icons:file-type-typescript-official",
@@ -22,6 +25,7 @@ export const TECH_ICON_MAP = {
   Kotlin: "skill-icons:kotlin-light",
   Java: "logos:java",
   Ktor: "skill-icons:ktor-light",
+  React: "vscode-icons:file-type-reactjs"
 } as const;
 
 export type Tech = keyof typeof TECH_ICON_MAP;

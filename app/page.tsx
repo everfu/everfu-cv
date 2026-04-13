@@ -4,6 +4,7 @@ import { BuilderBadge } from "@/components/builder-badge";
 import { InfoItem } from "@/components/info-item";
 import { InfoLink } from "@/components/info-link";
 import { InfoSection } from "@/components/info-section";
+import { PrintDensity } from "@/components/print-density";
 import { ProjectCard } from "@/components/project-card";
 import { getResumeData } from "@/lib/resume";
 
@@ -11,7 +12,7 @@ export function generateMetadata(): Metadata {
   const resume = getResumeData();
 
   return {
-    title: `${resume.name} - 简历`,
+    title: `${resume.name} - 前端开发实习`,
     description: resume.description,
     robots: {
       index: false,
@@ -25,11 +26,12 @@ export default function HomePage() {
 
   return (
     <main className="resume-shell">
+      <PrintDensity />
       <BuilderBadge />
 
       <article className="resume-article">
         <h1 className="resume-title">{resume.name}</h1>
-        <p className="resume-lead">{resume.headline}</p>
+        {resume.headline ? <p className="resume-lead">{resume.headline}</p> : null}
 
         <ul className="info-list">
           {resume.contacts.map((item) => (

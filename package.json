@@ -2,6 +2,7 @@
   "name": "everfu-cv",
   "version": "1.0.0",
   "private": true,
+  "license": "GPL-3.0-only",
   "type": "module",
   "engines": {
     "node": ">=20.9.0"
