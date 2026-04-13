@@ -1,6 +1,6 @@
 import type { ResumeData } from "@/types/resume";
 
-const FALLBACK_NAME = "*卓";
+const FALLBACK_NAME = "王卓";
 
 export function getResumeData(): ResumeData {
   const name = process.env.NEXT_PUBLIC_NAME?.trim() || FALLBACK_NAME;
@@ -19,7 +19,7 @@ export function getResumeData(): ResumeData {
       {
         icon: "ri:phone-line",
         label: "电话",
-        value: "173****2790（同微信）"
+        value: "173****7596（同微信）"
       },
       {
         icon: "ri:men-line",
@@ -95,8 +95,9 @@ export function getResumeData(): ResumeData {
       }
     ],
     certificates: [
-      "CET-4",
-      "江西省职业院校技能大赛（2025年，Web应用开发省级二等奖、小程序设计与开发省级三等奖）",
+      "湖南省青年岗位能手（2022年）",
+      "江西省职业院校技能大赛Web应用开发省级二等奖（2025年）",
+      "江西省职业院校技能大赛小程序设计与开发省级三等奖（2025年）",
     ]
   };
 }
