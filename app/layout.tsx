@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 
+import { getMetadataBase } from "@/lib/site";
+
 import "./globals.scss";
 
 export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
   title: "Everfu CV",
   description: "A print-friendly resume built with Next.js.",
   icons: {

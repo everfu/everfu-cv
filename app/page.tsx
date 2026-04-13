@@ -10,10 +10,37 @@ import { getResumeData } from "@/lib/resume";
 
 export function generateMetadata(): Metadata {
   const resume = getResumeData();
+  const title = `${resume.name} - 前端开发实习`;
+  const description = resume.description;
 
   return {
-    title: `${resume.name} - 前端开发实习`,
-    description: resume.description,
+    title,
+    description,
+    alternates: {
+      canonical: "./"
+    },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: "zh_CN",
+      siteName: "Everfu CV",
+      url: "./",
+      images: [
+        {
+          url: "opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: "Everfu CV share preview"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["opengraph-image"]
+    },
     robots: {
       index: false,
       follow: false

@@ -23,6 +23,12 @@ pnpm dev
 http://localhost:3000
 ```
 
+如需让 Open Graph / canonical 指向正式站点，可设置：
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
+```
+
 ## 构建
 
 ```bash
