@@ -4,7 +4,10 @@ import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Everfu CV",
-  description: "A print-friendly resume built with Next.js."
+  description: "A print-friendly resume built with Next.js.",
+  icons: {
+    icon: "/favicon.ico"
+  }
 };
 
 export default function RootLayout({
