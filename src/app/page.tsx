@@ -17,7 +17,7 @@ export function generateMetadata(): Metadata {
     title,
     description,
     alternates: {
-      canonical: "./"
+      canonical: "/"
     },
     openGraph: {
       title,
@@ -25,21 +25,12 @@ export function generateMetadata(): Metadata {
       type: "website",
       locale: "zh_CN",
       siteName: "Everfu CV",
-      url: "./",
-      images: [
-        {
-          url: "opengraph-image",
-          width: 1200,
-          height: 630,
-          alt: "Everfu CV share preview"
-        }
-      ]
+      url: "/"
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description,
-      images: ["opengraph-image"]
+      description
     },
     robots: {
       index: false,
