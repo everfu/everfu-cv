@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_SC, JetBrains_Mono } from "next/font/google";
 
 import { getMetadataBase } from "@/lib/site";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.scss";
 
@@ -35,8 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className={`${inter.variable} ${notoSansSC.variable} ${jetBrainsMono.variable}`}>
-      <body>{children}</body>
+    <html lang="zh-CN" className={`${inter.variable} ${notoSansSC.variable} ${jetBrainsMono.variable}`} suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

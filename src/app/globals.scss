@@ -19,16 +19,14 @@
   font-variant-alternates: styleset(open-digits, disambiguation, round-quotes-and-commas);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-bg: rgb(15 23 42 / 0.92);
-    --screen-shell: #020617;
-    --text-main: #e5eefc;
-    --text-muted: #cbd5e1;
-    --link: #93c5fd;
-    --border-soft: rgb(203 213 225 / 0.25);
-    --header-bg: rgb(148 163 184 / 0.18);
-  }
+[data-theme='dark'] {
+  --page-bg: rgb(15 23 42 / 0.92);
+  --screen-shell: #020617;
+  --text-main: #e5eefc;
+  --text-muted: #cbd5e1;
+  --link: #93c5fd;
+  --border-soft: rgb(203 213 225 / 0.25);
+  --header-bg: rgb(148 163 184 / 0.18);
 }
 
 html,

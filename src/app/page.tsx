@@ -6,6 +6,8 @@ import { InfoLink } from "@/components/info-link";
 import { InfoSection } from "@/components/info-section";
 import { PrintDensity } from "@/components/print-density";
 import { ProjectCard } from "@/components/project-card";
+import { FloatingMenu } from "@/components/floating-menu";
+import { AnimatedSection } from "@/components/animated-section";
 import { getResumeData } from "@/lib/resume";
 
 export function generateMetadata(): Metadata {
@@ -48,46 +50,58 @@ export default function HomePage() {
       <BuilderBadge />
 
       <article className="resume-article">
-        <h1 className="resume-title">{resume.name}</h1>
-        {resume.headline ? <p className="resume-lead">{resume.headline}</p> : null}
+        <AnimatedSection delay={0.1}>
+          <h1 className="resume-title">{resume.name}</h1>
+          {resume.headline ? <p className="resume-lead">{resume.headline}</p> : null}
 
-        <ul className="info-list">
-          {resume.contacts.map((item) => (
-            <InfoItem icon={item.icon} key={`${item.label}-${item.value ?? item.link}`} label={item.label}>
-              {item.link ? <InfoLink to={item.link}>{item.display}</InfoLink> : item.value}
-              {item.suffix ?? ""}
-            </InfoItem>
-          ))}
-        </ul>
-
-        <InfoSection title={resume.titles.skills}>
-          <ul>
-            {resume.skills.map((item) => (
-              <li key={item}>{item}</li>
+          <ul className="info-list">
+            {resume.contacts.map((item) => (
+              <InfoItem icon={item.icon} key={`${item.label}-${item.value ?? item.link}`} label={item.label}>
+                {item.link ? <InfoLink to={item.link}>{item.display}</InfoLink> : item.value}
+                {item.suffix ?? ""}
+              </InfoItem>
             ))}
           </ul>
-        </InfoSection>
+        </AnimatedSection>
 
-        <InfoSection title={resume.titles.internships}>
-          {resume.internships.map((project) => (
-            <ProjectCard key={`${project.name}-${project.from}`} project={project} />
-          ))}
-        </InfoSection>
+        <AnimatedSection delay={0.2}>
+          <InfoSection title={resume.titles.skills}>
+            <ul>
+              {resume.skills.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </InfoSection>
+        </AnimatedSection>
 
-        <InfoSection title={resume.titles.projects}>
-          {resume.projects.map((project) => (
-            <ProjectCard key={`${project.name}-${project.from}`} project={project} />
-          ))}
-        </InfoSection>
-
-        <InfoSection title={resume.titles.certificates}>
-          <ul>
-            {resume.certificates.map((item) => (
-              <li key={item}>{item}</li>
+        <AnimatedSection delay={0.3}>
+          <InfoSection title={resume.titles.internships}>
+            {resume.internships.map((project) => (
+              <ProjectCard key={`${project.name}-${project.from}`} project={project} />
             ))}
-          </ul>
-        </InfoSection>
+          </InfoSection>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.4}>
+          <InfoSection title={resume.titles.projects}>
+            {resume.projects.map((project) => (
+              <ProjectCard key={`${project.name}-${project.from}`} project={project} />
+            ))}
+          </InfoSection>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.5}>
+          <InfoSection title={resume.titles.certificates}>
+            <ul>
+              {resume.certificates.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </InfoSection>
+        </AnimatedSection>
       </article>
+
+      <FloatingMenu />
     </main>
   );
 }
