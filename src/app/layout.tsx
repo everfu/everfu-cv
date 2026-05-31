@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_SC, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_SC } from "next/font/google";
 
 import { getMetadataBase } from "@/lib/site";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.scss";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
@@ -18,7 +18,7 @@ const notoSansSC = Noto_Sans_SC({
   display: "swap",
 });
 
-const jetBrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className={`${inter.variable} ${notoSansSC.variable} ${jetBrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="zh-CN" className={`${geist.variable} ${notoSansSC.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}

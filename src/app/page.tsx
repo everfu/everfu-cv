@@ -51,17 +51,27 @@ export default function HomePage() {
 
       <article className="resume-article">
         <AnimatedSection delay={0.1}>
-          <h1 className="resume-title">{resume.name}</h1>
-          {resume.headline ? <p className="resume-lead">{resume.headline}</p> : null}
+          <header className="resume-hero">
+            <div className="resume-hero__main">
+              <div className="resume-window-bar" aria-hidden="true">
+                <span className="resume-window-bar__dot resume-window-bar__dot--red" />
+                <span className="resume-window-bar__dot resume-window-bar__dot--yellow" />
+                <span className="resume-window-bar__dot resume-window-bar__dot--green" />
+                <span className="resume-window-bar__file">Frontend Developer Resume</span>
+              </div>
+              <h1 className="resume-title">{resume.name}</h1>
+              {resume.headline ? <p className="resume-lead">{resume.headline}</p> : null}
 
-          <ul className="info-list">
-            {resume.contacts.map((item) => (
-              <InfoItem icon={item.icon} key={`${item.label}-${item.value ?? item.link}`} label={item.label}>
-                {item.link ? <InfoLink to={item.link}>{item.display}</InfoLink> : item.value}
-                {item.suffix ?? ""}
-              </InfoItem>
-            ))}
-          </ul>
+              <ul className="info-list">
+                {resume.contacts.map((item) => (
+                  <InfoItem icon={item.icon} key={`${item.label}-${item.value ?? item.link}`} label={item.label}>
+                    {item.link ? <InfoLink to={item.link}>{item.display}</InfoLink> : item.value}
+                    {item.suffix ?? ""}
+                  </InfoItem>
+                ))}
+              </ul>
+            </div>
+          </header>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
