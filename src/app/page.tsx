@@ -60,7 +60,6 @@ export default function HomePage() {
                 <span className="resume-window-bar__file">Frontend Developer Resume</span>
               </div>
               <h1 className="resume-title">{resume.name}</h1>
-              {resume.headline ? <p className="resume-lead">{resume.headline}</p> : null}
 
               <ul className="info-list">
                 {resume.contacts.map((item) => (

@@ -46,23 +46,23 @@ export function getResumeData(): ResumeData {
       {
         icon: "ri:graduation-cap-line",
         label: "学历",
-        value: "27届专科在读（大数据技术）"
+        value: "27届本科在读（计算机科学与技术）"
       }
     ],
     skills: [
-      "前端框架：熟悉 React 19、Next.js 16 App Router、Vue 3、Nuxt.js、TypeScript，能独立完成内容站、后台管理和复杂交互页面。",
-      "工程化与渲染：熟悉 SSR/SSG、MDX 内容管线、路由与数据获取、组件封装、响应式布局和可访问性细节，重视页面稳定性与可维护性。",
-      "内容与可视化：实践 Markdown/MDX、Shiki、KaTeX、Charts、Mindmap、Atom/RSS、Sitemap 等能力，擅长把结构化内容转化为清晰的前端体验。",
-      "后端协作：了解 C++ Drogon、PostgreSQL、Redis、WebSocket、鉴权、异常兜底和接口联调，能在全栈项目中推进前端侧交付。"
+      "AI 技术：了解生成式 AI 原理与应用，能使用 Codex、Claude Code 等工具提升开发效率和解决方案质量。",
+      "前端框架：熟悉 React 19、Next.js 16、Vue 3、TypeScript，能独立完成内容站、后台管理和复杂交互页面。",
+      "全栈开发：具备 Next.js 全栈开发能力，理解 API Routes、Server Actions 与数据库交互，能实现前后端统一应用交付。",
+      "性能优化：了解前端性能优化方法，能在项目中实践代码分割、懒加载、缓存策略等手段提升加载和交互体验。",
+      "工具链：熟练使用 Git、VS Code、Postman 等开发工具，了解 Vite、Webpack 等构建工具的基本配置和原理。"
     ],
     internships: [
       {
         name: "深圳晞云科技有限公司",
-        desc: "CoAI 相关功能与官网维护",
+        desc: "功能开发与官网维护",
         role: "前端开发",
         from: "2025.07",
         bullets: [
-          "参与 CoAI 相关页面与交互功能开发，围绕表单、状态反馈、异常提示等场景修复十余处体验缺陷，提升页面使用流畅度。",
           "维护公司官网与业务展示页面，配合设计和内容调整优化信息层级、响应式布局和访问体验。",
           "在需求拆解、接口联调和问题定位中沉淀前端实现细节，协助提升页面稳定性与迭代效率。"
         ]
@@ -85,14 +85,13 @@ export function getResumeData(): ResumeData {
       {
         name: "EvoCompete",
         desc: "面向大学生的竞赛平台",
-        role: "前端 / 全栈协作",
-        link: "https://jr-jx.cn",
+        role: "Next.js 全栈开发",
         from: "2026.04",
-        techs: ["Next.js", "TypeScript", "C++", "PostgreSQL", "Redis"],
+        techs: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Redis"],
         bullets: [
           "接入 Markdown、KaTeX、Shiki、Charts 与 Mindmap，完成题解、公式、代码高亮、能力雷达图和知识图谱等内容渲染能力。",
-          "封装客户端与服务端请求层，统一处理鉴权、错误兜底、超时控制和游客回退逻辑，降低多模块联调成本。",
-          "协作 C++ Drogon、PostgreSQL、Redis 与 WebSocket 服务，支撑赛事导入、审批邀请和实时通知等核心链路。"
+          "基于 Next.js App Router 构建前后端统一应用，使用 API Routes / Server Actions 处理鉴权、错误兜底和游客回退，保障全链路稳定性。",
+          "在纯 Next.js 全栈开发中推进数据库模型与接口设计，形成从页面渲染到数据存储的闭环交付能力。"
         ]
       },
       {
@@ -110,7 +109,6 @@ export function getResumeData(): ResumeData {
       }
     ],
     certificates: [
-      "江西省职业院校技能大赛·新一代信息技术应用省级一等奖（2026年）",
       "中国高校计算机大赛·团体程序设计天梯赛高校省级一等奖（2026年）",
       "江西省职业院校技能大赛·Web应用开发省级二等奖（2025年）",
       "江西省职业院校技能大赛·小程序设计与开发省级三等奖（2025年）",

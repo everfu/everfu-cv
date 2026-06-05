@@ -30,7 +30,6 @@ export type ProjectEntry = {
 export type ResumeData = {
   name: string;
   description: string;
-  headline: string;
   titles: SectionTitles;
   contacts: ContactItem[];
   skills: string[];

@@ -25,7 +25,8 @@ export const TECH_ICON_MAP = {
   Kotlin: "skill-icons:kotlin-light",
   Java: "logos:java",
   Ktor: "skill-icons:ktor-light",
-  React: "vscode-icons:file-type-reactjs"
+  React: "vscode-icons:file-type-reactjs",
+  Prisma: "logos:prisma",
 } as const;
 
 export type Tech = keyof typeof TECH_ICON_MAP;
