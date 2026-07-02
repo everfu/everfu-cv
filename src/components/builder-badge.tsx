@@ -9,7 +9,7 @@ export function BuilderBadge() {
       target="_blank"
     >
       <span>Built with</span>
-      <ResumeIcon icon="skill-icons:nextjs-light" />
+      <ResumeIcon className="builder-badge__icon" icon="simple-icons:nextdotjs" />
     </a>
   );
 }

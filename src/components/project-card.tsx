@@ -11,11 +11,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <section className="project-card">
       <div className="project-card__header">
-        <span className="project-card__name">{project.name}</span>
-        <span className="project-card__desc">
-          {project.desc}
-          {project.role ? ` · ${project.role}` : ""}
-        </span>
+        <div className="project-card__header-left">
+          <span className="project-card__name">{project.name}</span>
+          <span className="project-card__desc">
+            {project.desc}
+            {project.role ? ` · ${project.role}` : ""}
+          </span>
+        </div>
         <span className="project-card__date">
           {project.from} - {project.to ?? "至今"}
         </span>

@@ -53,12 +53,6 @@ export default function HomePage() {
         <AnimatedSection delay={0.1}>
           <header className="resume-hero">
             <div className="resume-hero__main">
-              <div className="resume-window-bar" aria-hidden="true">
-                <span className="resume-window-bar__dot resume-window-bar__dot--red" />
-                <span className="resume-window-bar__dot resume-window-bar__dot--yellow" />
-                <span className="resume-window-bar__dot resume-window-bar__dot--green" />
-                <span className="resume-window-bar__file">Frontend Developer Resume</span>
-              </div>
               <h1 className="resume-title">{resume.name}</h1>
 
               <ul className="info-list">
@@ -85,17 +79,21 @@ export default function HomePage() {
 
         <AnimatedSection delay={0.3}>
           <InfoSection title={resume.titles.internships}>
-            {resume.internships.map((project) => (
-              <ProjectCard key={`${project.name}-${project.from}`} project={project} />
-            ))}
+            <div className="timeline-container">
+              {resume.internships.map((project) => (
+                <ProjectCard key={`${project.name}-${project.from}`} project={project} />
+              ))}
+            </div>
           </InfoSection>
         </AnimatedSection>
 
         <AnimatedSection delay={0.4}>
           <InfoSection title={resume.titles.projects}>
-            {resume.projects.map((project) => (
-              <ProjectCard key={`${project.name}-${project.from}`} project={project} />
-            ))}
+            <div className="timeline-container">
+              {resume.projects.map((project) => (
+                <ProjectCard key={`${project.name}-${project.from}`} project={project} />
+              ))}
+            </div>
           </InfoSection>
         </AnimatedSection>
 
